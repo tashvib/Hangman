@@ -18,6 +18,7 @@ public class EastPanel extends JPanel{
 		add(livesLeft);
 		LI = new LetterInput();
 		add(LI);
+		LI.setLivesPanel(livesLeft);
 	}
 	public LetterInput getLI() {
 		return LI;

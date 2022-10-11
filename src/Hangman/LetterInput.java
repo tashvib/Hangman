@@ -9,6 +9,7 @@ import java.awt.Color;
 
 public class LetterInput extends JPanel implements KeyListener{
 	private String letter;
+	private LivesLeftPanel userSpace;
 	public LetterInput() {
 		this.letter = "";
 		addKeyListener(this);
@@ -41,6 +42,12 @@ public class LetterInput extends JPanel implements KeyListener{
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
+		
+	}
+
+	public void setLivesPanel(LivesLeftPanel theActualPanel) {
+		//sets inputed letter in LetterInput/Hangman to one of the spaces in livesLeftPanel
+		this.userSpace = livesLeft;
 		
 	}
 	
