@@ -12,7 +12,7 @@ import java.awt.Graphics2D;
 import java.awt.event.*;
 import java.io.IOException;
 
-public class Hangman extends JFrame implements MouseListener, KeyListener{
+public class Hangman extends JFrame implements MouseListener{
 	private int lives;
 	private JPanel component;
 	private EastPanel EP;
@@ -24,12 +24,12 @@ public class Hangman extends JFrame implements MouseListener, KeyListener{
 		setSize(2000, 2000);
 		setLayout(new BorderLayout());
 		addMouseListener(this);
-		addKeyListener(this);
 		
 		EP= new EastPanel();
 		add(EP, BorderLayout.EAST);
 		EP.setPreferredSize(new Dimension (500,2000));
 		
+		addKeyListener(EP.getLI());		
 		
 		
 //		livesLeft = new JLabel();
@@ -60,24 +60,6 @@ public class Hangman extends JFrame implements MouseListener, KeyListener{
 		//draw hangman pole
 		g2D.drawLine(325, 70, 325, 130);
 	
-		
-	}
-
-	@Override
-	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 

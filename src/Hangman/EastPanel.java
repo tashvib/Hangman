@@ -19,4 +19,7 @@ public class EastPanel extends JPanel{
 		LI = new LetterInput();
 		add(LI);
 	}
+	public LetterInput getLI() {
+		return LI;
+	}
 }

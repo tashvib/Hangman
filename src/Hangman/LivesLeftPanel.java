@@ -18,9 +18,8 @@ public class LivesLeftPanel extends JPanel{
 
 	
 	@Override
-	public void paint(Graphics g)
+	public void paint(Graphics g2D)
 	{
-		Graphics2D g2D = (Graphics2D) g;
 		g2D.setFont(new Font("TimesRoman", Font.PLAIN, 30));
 		g2D.setColor(Color.BLUE);
 		g2D.fillRect(0, 0, getWidth(), getHeight());

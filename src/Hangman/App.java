@@ -7,6 +7,7 @@ public class App {
 		
 		Hangman h = new Hangman();
 		h.setVisible(true);
+		h.requestFocus();
 		//System.out.println(word.getAnswer());
 		//BufferedReader b = new BufferedReader(new FileReader("./words.txt"));
 		//System.out.println(b.readLine());

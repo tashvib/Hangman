@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Random;
 
 public class GenerateWord {
-	private String s;
+	private String word;
 	GenerateWord() throws IOException{
 		Random r = new Random();
 		String[] wordList = new String[9894];
@@ -18,13 +18,13 @@ public class GenerateWord {
 		}
 		b.close();
 		
-		s = wordList[r.nextInt(wordList.length)];
+		word = wordList[r.nextInt(wordList.length)];
 		
 
 	}
 	public String getAnswer(){
 		
-		return s;
+		return word;
 	}
 }
 
