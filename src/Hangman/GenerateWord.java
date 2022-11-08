@@ -5,6 +5,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
 
+/**
+ * It reads in from "words.txt" and generates a random word.
+ */
 public class GenerateWord {
 	private String word;
 	GenerateWord() throws IOException{
@@ -22,6 +25,10 @@ public class GenerateWord {
 		
 
 	}
+	/**
+	 * Getter for the randomly generated word.
+	 * @return the word
+	 * */
 	public String getAnswer(){
 		
 		return word;
