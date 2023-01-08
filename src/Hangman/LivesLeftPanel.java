@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import java.awt.Color;
@@ -50,6 +51,14 @@ public class LivesLeftPanel extends JPanel{
 		}
 		
 	}
+	public boolean gameWon() {
+		for(int x = 0; x<display.length; x++) {
+			if(display[x].equals("__" )) {
+				return false;
+			}
+		}
+		return true;
+	}
 	public boolean compareWordandInput(String theLetter, JFrame jf) {
 		boolean tfValue = false;
 		for(int x =0; x<word.length(); x++) {
@@ -60,8 +69,23 @@ public class LivesLeftPanel extends JPanel{
 			}
 			//discrete mathematics!! explain w/test cases 
 		}
+		if(gameWon()) {
+			JFrame loseWindow = new JFrame();
+			JLabel youWin = new JLabel("YOU WIN!");
+			loseWindow.add(youWin);
+			loseWindow.setSize(500, 500);
+			loseWindow.setVisible(true);
+		}
 		if(!tfValue) {
 			amntOfLives--;
+			if(amntOfLives==0) {
+				JFrame loseWindow = new JFrame();
+				JLabel youLose = new JLabel("YOU LOSE!");
+				loseWindow.add(youLose);
+				loseWindow.setSize(500, 500);
+				loseWindow.setVisible(true);
+			}
+
 		}
 		System.out.println("Enter detected");
 		update(getGraphics()); 

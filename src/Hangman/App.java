@@ -17,3 +17,5 @@ public class App {
 //		System.out.println(b.readLine());
 	}
 }
+
+//MVC : Model, View, Controller

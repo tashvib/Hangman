@@ -46,7 +46,7 @@ public class LetterInput extends JPanel implements KeyListener{
 		g.drawString(letter, x+50, y+50);*/
 		//for loop that runs each time user presses key, ini that for lo
 		for(int i = 0;i<wordBank.size(); i++) {
-			g.drawString((wordBank.get(i)), x, y);
+			g.drawString((wordBank.get(i)), x+50, y+50);
 			System.out.println(wordBank.get(i));
 			x+=30;
 			if(x>400) {
@@ -62,6 +62,8 @@ public class LetterInput extends JPanel implements KeyListener{
 		if(e.getKeyCode()== KeyEvent.VK_ENTER) {
 			wordBank.add(letter);
 			llp.compareWordandInput(letter, jframe);
+			letter =  " ";
+			this.update(getGraphics());
 			return;
 		}
 		letter=String.valueOf(e.getKeyChar());
